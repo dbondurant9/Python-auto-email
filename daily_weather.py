@@ -8,7 +8,7 @@ url = "https://weatherapi-com.p.rapidapi.com/forecast.json"
 querystring = {"q":"Denver","days":"1"}
 
 headers = {
-	"x-rapidapi-key": "d4a6ba82bcmsh6cd932f93707a5fp199230jsn04744ae45b50",
+	"x-rapidapi-key": "[API key]",
 	"x-rapidapi-host": "weatherapi-com.p.rapidapi.com"
 }
 
@@ -20,9 +20,9 @@ data = response.json()
 template = open("/home/kali/weather_email/weather_template.html")
 
 email_body = ''
-app_pwd = 'fecotoubpeynixkb'
-email = 'cyber.project129@gmail.com'
-send_to = 'dbondu16@gmail.com'
+app_pwd = '[App password]'
+email = '[Sending email account]'
+send_to = '[Receiving email account]'
 datetime = datetime.datetime.now().strftime("%m-%d-%Y")
 subject = 'Weather Forecast for %s'%(datetime)
 high = data['forecast']['forecastday'][0]['day']['maxtemp_f']
